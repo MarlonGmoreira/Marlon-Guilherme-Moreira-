@@ -1,0 +1,304 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#containerFull{
+    width: 780px;
+    margin: 0 auto;
+}
+
+#container{
+    border: 3px solid #000;
+    width: 566px;
+    height: 563px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+.row{
+    clear: both;
+}
+
+.row div{
+    font-size: 3.5em;
+    float: left;
+    width: 70px;
+    height: 70px;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    text-align: center;
+}
+
+.row div:first-child{
+    border-left: 0;
+}
+
+.line-1 div:nth-child(2n+1){
+    background: #000;
+    color: #fff;
+}
+
+.line-2 div:nth-child(2n){
+    background: #000;
+    color:#fff
+}
+
+#pontuacao{
+    border: 2.5px solid rgb(239, 255, 21);
+    width: 200px;
+    height: 50px;
+    float: left;
+    padding: 6px;
+    font-size: 30px;
+    text-align: right;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.mensagem{
+    text-align: center;
+    margin: 10px;
+   
+}
+
+.oi{
+    background: #fff;
+    color: rgb(124, 106, 0)
+
+}
+ .ai{ 
+     color: blue;
+ }
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Xadrez</title>
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+   
+<div id="containerFull">
+<div id="container">
+   <div class="row line-1">
+    <div class="oi" id="1">&#9814</div>
+    <div class="oi" id="2">&#9816</div>
+    <div class="oi" id="3">&#9815</div>
+    <div class="oi" id="4">&#9819</div>
+    <div class="oi" id="5">&#9812</div>
+    <div class="oi" id="6">&#9821</div>
+    <div class="oi" id="7">&#9816</div>
+    <div class="oi" id="8">&#9820</div>
+  </div>
+
+<div class="row line-2">
+    <div class="oi" id="9">&#9823</div>
+    <div class="oi" id="10">&#9817</div>
+    <div class="oi" id="11">&#9823</div>
+    <div class="oi" id="12">&#9817</div>
+    <div class="oi" id="13">&#9823</div>
+    <div class="oi" id="14">&#9817</div>
+    <div class="oi" id="15">&#9823</div>
+    <div class="oi" id="16">&#9817</div>
+</div>
+
+<div class="row line-1">
+    <div class="oi" id="17"></div>
+    <div class="oi" id="18"></div>
+    <div id="19"></div>
+    <div id="20"></div>
+    <div id="21"></div>
+    <div id="22"></div>
+    <div id="23"></div>
+    <div id="24"></div>
+</div>
+
+<div class="row line-2">
+    <div class="oi" id="25"></div>
+    <div class="oi" id="26"></div>
+    <div id="27"></div>
+    <div id="28"></div>
+    <div id="29"></div>
+    <div id="30"></div>
+    <div id="31"></div>
+    <div id="32"></div>
+</div>
+
+<div class="row line-1">
+    <div class="oi" id="33"></div>
+    <div class="oi" id="34"></div>
+    <div id="35"></div>
+    <div id="36"></div>
+    <div id="37"></div>
+    <div id="38"></div>
+    <div id="39"></div>
+    <div id="40"></div>
+</div>
+
+<div class="row line-2">
+    <div id="41"></div>
+    <div id="42"></div>
+    <div id="43"></div>
+    <div id="44"></div>
+    <div id="45"></div>
+    <div id="46"></div>
+    <div id="47"></div>
+    <div id="48"></div>
+</div>
+
+<div class="row line-1">
+  <div  class="ai" id="49">&#9817</div>
+  <div  class="ai" id="50">&#9823</div>
+  <div  class="ai" id="51">&#9817</div>
+  <div  class="ai" id="52">&#9823</div>
+  <div  class="ai" id="53">&#9817</div>
+  <div  class="ai" id="54">&#9823</div>
+  <div  class="ai" id="55">&#9817</div>
+  <div  class="ai" id="56">&#9823</div>
+</div>
+
+<div class="row line-2">
+    <div class="ai" id="57">&#9820</div>
+    <div class="ai" id="58">&#9816</div>
+    <div class="ai" id="59">&#9815</div>
+    <div class="ai" id="60">&#9813</div>
+    <div class="ai" id="61">&#9812</div>
+    <div class="ai" id="62">&#9815</div>
+    <div class="ai" id="63">&#9816</div>
+    <div class="ai" id="64">&#9814</div>
+</div>
+</div>
+<div id="pontuacao">0</div>
+<div class="mensagem">
+   Comece o jogo clicando nas peças.
+</div>
+<div class="mensagem">
+   DIVIRTA-SE!!
+   <p style="font-size:50px">
+    &#128516;
+    </p>
+</div>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Xadrez</title>
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+   
+<div id="containerFull">
+<div id="container">
+   <div class="row line-1">
+    <div class="oi" id="1">&#9814</div>
+    <div class="oi" id="2">&#9816</div>
+    <div class="oi" id="3">&#9815</div>
+    <div class="oi" id="4">&#9819</div>
+    <div class="oi" id="5">&#9812</div>
+    <div class="oi" id="6">&#9821</div>
+    <div class="oi" id="7">&#9816</div>
+    <div class="oi" id="8">&#9820</div>
+  </div>
+
+<div class="row line-2">
+    <div class="oi" id="9">&#9823</div>
+    <div class="oi" id="10">&#9817</div>
+    <div class="oi" id="11">&#9823</div>
+    <div class="oi" id="12">&#9817</div>
+    <div class="oi" id="13">&#9823</div>
+    <div class="oi" id="14">&#9817</div>
+    <div class="oi" id="15">&#9823</div>
+    <div class="oi" id="16">&#9817</div>
+</div>
+
+<div class="row line-1">
+    <div class="oi" id="17"></div>
+    <div class="oi" id="18"></div>
+    <div id="19"></div>
+    <div id="20"></div>
+    <div id="21"></div>
+    <div id="22"></div>
+    <div id="23"></div>
+    <div id="24"></div>
+</div>
+
+<div class="row line-2">
+    <div class="oi" id="25"></div>
+    <div class="oi" id="26"></div>
+    <div id="27"></div>
+    <div id="28"></div>
+    <div id="29"></div>
+    <div id="30"></div>
+    <div id="31"></div>
+    <div id="32"></div>
+</div>
+
+<div class="row line-1">
+    <div class="oi" id="33"></div>
+    <div class="oi" id="34"></div>
+    <div id="35"></div>
+    <div id="36"></div>
+    <div id="37"></div>
+    <div id="38"></div>
+    <div id="39"></div>
+    <div id="40"></div>
+</div>
+
+<div class="row line-2">
+    <div id="41"></div>
+    <div id="42"></div>
+    <div id="43"></div>
+    <div id="44"></div>
+    <div id="45"></div>
+    <div id="46"></div>
+    <div id="47"></div>
+    <div id="48"></div>
+</div>
+
+<div class="row line-1">
+  <div  class="ai" id="49">&#9817</div>
+  <div  class="ai" id="50">&#9823</div>
+  <div  class="ai" id="51">&#9817</div>
+  <div  class="ai" id="52">&#9823</div>
+  <div  class="ai" id="53">&#9817</div>
+  <div  class="ai" id="54">&#9823</div>
+  <div  class="ai" id="55">&#9817</div>
+  <div  class="ai" id="56">&#9823</div>
+</div>
+
+<div class="row line-2">
+    <div class="ai" id="57">&#9820</div>
+    <div class="ai" id="58">&#9816</div>
+    <div class="ai" id="59">&#9815</div>
+    <div class="ai" id="60">&#9813</div>
+    <div class="ai" id="61">&#9812</div>
+    <div class="ai" id="62">&#9815</div>
+    <div class="ai" id="63">&#9816</div>
+    <div class="ai" id="64">&#9814</div>
+</div>
+</div>
+<div id="pontuacao">0</div>
+<div class="mensagem">
+   Comece o jogo clicando nas peças.
+</div>
+<div class="mensagem">
+   DIVIRTA-SE!!
+   <p style="font-size:50px">
+    &#128516;
+    </p>
+</div>
+</div>
+</body>
+</html>
